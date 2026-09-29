@@ -1,0 +1,75 @@
+Lab 4 - Task 1
+
+1. Query:
+?- house = house.
+true.
+
+Explanation:
+They are the same, so they can unify.
+
+2. Query:
+?- house = abc.
+false.
+
+Explanation:
+They are different, so they cannot unify.
+
+3. Query:
+?- edge(a,b) = edge(C,b).
+C = a.
+
+Explanation:
+C can take the value a, so they unify.
+
+4. Query:
+?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+
+Explanation:
+C takes a and B takes d, so they unify.
+
+5. Query:
+?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+
+Explanation:
+C takes a and B takes d, so they unify.
+
+6. Query:
+?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g,h).
+
+Explanation:
+A takes a and B takes f(g,h), so they unify.
+
+7. Query:
+?- edge(A,A) = edge(b,c).
+false.
+
+Explanation:
+A cannot be b and c at the same time.
+
+8. Query:
+?- edge(A,A) = edge(b,b).
+A = b.
+
+Explanation:
+Both values are b, so A can be b.
+
+9. Query:
+?- A = B, B = f.
+A = B,
+B = f.
+
+Explanation:
+A and B are linked, and both take the value f.
+
+10. Query:
+?- A = B, B = f, A = e.
+false.
+
+Explanation:
+A and B should have the same value, but f and e are different.
